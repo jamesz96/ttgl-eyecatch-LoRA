@@ -64,7 +64,7 @@ ____
 
 ### Training/Cleaning Data
 
-I extracted 28 `512x512` images from ~65% of the eyecatches used in the show. The remaining eyecatches used a different style or were tricky to caption.
+I extracted 28 `512x512` images from ~65% of the eyecatches used in the show. The remaining eyecatches used a different style or were tricky to caption so they weren't included in the training set.
 
 Cleaning the data involved:
 - removing watermarks
