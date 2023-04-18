@@ -46,12 +46,14 @@ Eyecatch Illustration Credits:
 
 ### Usage Details
 
-TODO
+- Easiest way to get set up is to use [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+  - There are plenty of guides on this online
+- [Download me](https://civitai.com/models/44734?modelVersionId=49372) from Civit.ai
 
 
 <br />
 
-| No LoRA | ttgl-eyecatch LoRA |
+| AnyLora Checkpoint | ttgl-eyecatch |
 | --- | --- |
 | ![00083-4214451159](https://user-images.githubusercontent.com/30682722/232762400-d5d3921c-89e1-4585-83d2-4c5a14cebc8a.png) | ![00087-4214451159](https://user-images.githubusercontent.com/30682722/232768708-f3f71a0e-27cf-4e21-96ac-fbfcc3154847.png)
 | ![00032-3030562801-no-lora](https://user-images.githubusercontent.com/30682722/232760120-a056b256-9a03-4554-92ca-eb11d3284281.png) | ![00031-3030562801](https://user-images.githubusercontent.com/30682722/232760164-dcf90844-45a6-4801-860c-a33b35afa077.png) |
@@ -62,13 +64,16 @@ ____
 
 # More details for those interested
 
-### Training/Cleaning Data
+### Training Data
 
-I extracted 28 `512x512` images from ~65% of the eyecatches used in the show. The remaining eyecatches used a different style or were tricky to caption so they weren't included in the training set.
+I extracted 28 `512x512` images from ~50% of the eyecatches used in the show. The remaining eyecatches used a different style or were tricky to caption so they weren't included in the training set.
 
 Cleaning the data involved:
 - removing watermarks
-- manual captioning
+- manual captioning (training for a general art style not a specific style or object)
+  - Describe EVERYTHING in the image EXCEPT for the style
+  - Still on the fence as to whether I should include "soft" triggers
+  - Omit names from all captions
 - inpainting
 - cropping (a few cases of extracting multiple images from a single eyecatch)
 
@@ -79,7 +84,7 @@ Stable Diffusion checkpoint: [anyloraCheckpoint_bakedvaeFtmseFp16NO](https://civ
 Recommended LoRA optimizer args gave me the best results, though I probably haven't played around with these parameters enough yet.
 
 <details>
-    <summary>Training config used for Kohya-ss</summary>
+    <summary>Training config used for [Kohya-ss](https://github.com/kohya-ss/sd-scripts)</summary>
 
 ```
 [additional_network_arguments]
@@ -141,9 +146,19 @@ lowram = true
 
 ![](https://user-images.githubusercontent.com/30682722/232767950-3fb07c17-a9d7-4752-8fc4-2a464222a3bf.png)
 
-In my opinion, the eyecatch art style I'm looking for is most prominent in models (columns) `000005` and `000007` at strength 0.5 - 1.  
+In my opinion, the eyecatch art style I'm looking for is most prominent in models (columns) `000005` and `000007` from strengths `0.5` to `1`.  
 
 I'll go with the weaker one for now.
 
 
-It is probably not a big deal as something like [LoRA Block Weight](https://github.com/hako-mikan/sd-webui-lora-block-weight) extension for [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) allows setting the strength at each individual block as opposed to applying the same strength to all blocks.
+Choosing one over the other is probably not a big deal as something like [LoRA Block Weight](https://github.com/hako-mikan/sd-webui-lora-block-weight) extension for [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) allows setting the strength at each individual block as opposed to applying the same strength across all blocks.
+
+
+### What's Next?
+
+This is model is trained purely on the original eyecatches. There are only 54 of them in total which isn't a whole lot.
+Fortunately, there are hundreds if not thousands of these [Gurren Lagann eyecatch parodies](https://knowyourmeme.com/memes/gurren-lagann-eyecatch-parodies) created by fans.
+
+> *Fun sidenote: these "parodies" are really just memes but this was a time before memes were called '"memes" - so the name stuck.*
+
+I've done a little experimenting with including these community eyecatches in the training set but the resulting models definitely need some more tweaking.
