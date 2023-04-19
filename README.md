@@ -160,7 +160,7 @@ Choosing one over the other is probably not a big deal as something like [LoRA B
 
 ### What's Next?
 
-This is model is trained purely on the original eyecatches. There are only 54 of them in total which isn't a whole lot.
+This model is trained purely on the original eyecatches. There are only 54 of them in total which isn't a whole lot.
 Fortunately, there are hundreds if not thousands of these [Gurren Lagann eyecatch parodies](https://knowyourmeme.com/memes/gurren-lagann-eyecatch-parodies) created by fans.
 
 > *Fun sidenote: these "parodies" are really just memes but this was a time before memes were called '"memes" - so the name stuck.*
