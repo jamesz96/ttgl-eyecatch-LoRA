@@ -51,7 +51,7 @@ Eyecatch Illustration Credits:
 
 - Easiest way to get set up is to use [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
   - There are plenty of guides on this online
-- [Download me](https://civitai.com/models/44734?modelVersionId=49372) from Civit.ai
+- [Download](https://civitai.com/models/44734?modelVersionId=49372) the model from Civit.ai
 - Best results on [AnyLoRA](https://civitai.com/models/23900/anylora-checkpoint) checkpoint
 
 
