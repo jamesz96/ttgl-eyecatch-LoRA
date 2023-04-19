@@ -1,3 +1,9 @@
+![downloads] ![rating]
+
+[downloads]: https://img.shields.io/badge/dynamic/json?color=blue&label=Downloads&query=%24.stats.downloadCount&url=https%3A%2F%2Fcivitai.com%2Fapi%2Fv1%2Fmodels%2F44734&style=for-the-badge
+[rating]: https://img.shields.io/badge/dynamic/json?color=9cf&label=rating&query=%24.stats.rating&suffix=%2F5&url=https%3A%2F%2Fcivitai.com%2Fapi%2Fv1%2Fmodels%2F44734&style=for-the-badge
+
+
 # ttgl-eyecatch-LoRA
 
 
