@@ -2,7 +2,7 @@
 
 [model-link]: https://civitai.com/models/44734?modelVersionId=49372
 [downloads]: https://img.shields.io/badge/dynamic/json?color=blue&label=Downloads&query=%24.stats.downloadCount&url=https%3A%2F%2Fcivitai.com%2Fapi%2Fv1%2Fmodels%2F44734&style=for-the-badge
-[favourites]: https://img.shields.io/badge/dynamic/json?color=9cf&label=❤&query=%24.stats.favoriteCount&url=https%3A%2F%2Fcivitai.com%2Fapi%2Fv1%2Fmodels%2F44734&style=for-the-badge
+[favourites]: https://img.shields.io/badge/dynamic/json?color=9cf&label=❤&query=%24.stats.thumbsUpCount&url=https%3A%2F%2Fcivitai.com%2Fapi%2Fv1%2Fmodels%2F44734&style=for-the-badge
 
 # ttgl-eyecatch-LoRA
 
